@@ -2,7 +2,7 @@
 /node_modules
 /.pnpm-store
 /.npm
-
+node_modules/
 # testing
 /coverage
 
