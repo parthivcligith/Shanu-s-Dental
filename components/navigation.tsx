@@ -7,10 +7,10 @@ import { Menu, X } from "lucide-react"
 
 const navLinks = [
   { name: "Home", href: "#home" },
-  { name: "About Clinic", href: "#about" },
-  { name: "Services", href: "#services" },
-  { name: "Doctors", href: "#doctors" },
-  { name: "Patient Stories", href: "#stories" },
+  { name: "About Us", href: "#about" },
+  { name: "Products", href: "#services" },
+  { name: "Collections", href: "#doctors" },
+  { name: "Testimonials", href: "#stories" },
 ]
 
 export function Navigation() {
@@ -42,10 +42,10 @@ export function Navigation() {
             <div className="flex items-center justify-between h-16">
               <motion.a
                 href="#home"
-                className="text-xl font-medium tracking-tight text-foreground"
+                className="flex items-center gap-2"
                 whileHover={{ scale: 1.02 }}
               >
-                Shanu's Dental
+                <img src="/images/feza-logo.png" alt="Feza Mattresses" className="h-10 w-auto" />
               </motion.a>
 
               <div className="hidden md:flex items-center gap-6">
@@ -71,7 +71,7 @@ export function Navigation() {
                 className="hidden md:block"
               >
                 <Button className="bg-foreground text-background hover:bg-foreground/90 font-medium px-5 py-2 h-9 text-sm rounded-full">
-                  Book Online
+                  Shop Now
                 </Button>
               </motion.div>
 
@@ -100,7 +100,7 @@ export function Navigation() {
                     </a>
                   ))}
                   <Button className="bg-foreground text-background hover:bg-foreground/90 font-medium rounded-full mt-2">
-                    Book Online
+                    Shop Now
                   </Button>
                 </div>
               </motion.div>

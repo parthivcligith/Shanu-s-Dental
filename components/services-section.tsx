@@ -7,39 +7,39 @@ import { ArrowRight } from "lucide-react"
 
 const services = [
   {
-    title: "Implantation",
-    description: "We use modern implant materials and ensure long-lasting aesthetic results.",
-    image: "/dental-implant-procedure-modern-clinic.jpg",
+    title: "Memory Foam Mattress",
+    description: "Pressure-relieving memory foam technology that molds to your body, providing personalized comfort and support.",
+    image: "/mattress-memory-foam.jpg",
   },
   {
-    title: "Professional Hygiene",
-    description: "A deep cleaning procedure that removes tartar, plaque, and keeps your smile healthy.",
-    image: "/dental-hygiene-cleaning-teeth-whitening.jpg",
+    title: "Orthopedic Support",
+    description: "Specially designed with firm support for spinal alignment and relief from back and neck pain.",
+    image: "/mattress-orthopedic.jpg",
   },
   {
-    title: "Cosmetic Dentistry",
-    description: "Whitening, veneers, aesthetic restorations, and smile design.",
-    image: "/cosmetic-dentistry-beautiful-smile-veneers.jpg",
+    title: "Gel-Infused Cooling",
+    description: "Advanced cooling gel technology keeps you cool throughout the night for uninterrupted sleep.",
+    image: "/mattress-cooling-gel.jpg",
   },
   {
-    title: "Orthodontics",
-    description: "Bite correction for kids and adults. Braces, aligners, individual treatment plans.",
-    image: "/orthodontics-braces-aligners-teeth.jpg",
+    title: "Natural Latex",
+    description: "100% natural latex construction for eco-friendly, durable, and hypoallergenic comfort.",
+    image: "/mattress-latex.jpg",
   },
   {
-    title: "Pediatric Dentistry",
-    description: "Gentle and caring dental treatment for children in a friendly environment.",
-    image: "/pediatric-dentist-child-patient.jpg",
+    title: "Hybrid Comfort",
+    description: "Perfect blend of springs and foam for the ultimate balance of support and softness.",
+    image: "/mattress-hybrid.jpg",
   },
   {
-    title: "Root Canal Treatment",
-    description: "Saving natural teeth with modern endodontic procedures and pain-free treatment.",
-    image: "/root-canal-treatment-endodontics.jpg",
+    title: "Premium Pillow-Top",
+    description: "Luxurious quilted surface with extra cushioning for cloud-like comfort and elegance.",
+    image: "/mattress-pillow-top.jpg",
   },
   {
-    title: "Dental Surgery",
-    description: "Complex surgical procedures including extractions and bone grafting performed by experts.",
-    image: "/dental-surgery-procedure.jpg",
+    title: "Adjustable Air Beds",
+    description: "Customizable firmness levels for couples with different comfort preferences.",
+    image: "/mattress-adjustable.jpg",
   },
 ]
 
@@ -61,7 +61,7 @@ export function ServicesSection() {
             className="text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-foreground"
             style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}
           >
-            Popular Services
+            Our Mattress Collections
           </h2>
         </motion.div>
 
@@ -95,7 +95,7 @@ export function ServicesSection() {
                     variant="ghost"
                     className="p-0 h-auto font-semibold text-foreground hover:text-foreground/80 group/btn"
                   >
-                    View Service
+                    View Product
                     <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
                   </Button>
                 </div>

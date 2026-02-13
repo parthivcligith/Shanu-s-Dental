@@ -22,13 +22,13 @@ export function AboutSection() {
                             WHO WE ARE
                         </div>
                         <h2 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight">
-                            Redefining Dental Care in Dubai
+                            Redefining Sleep Excellence
                         </h2>
                         <p className="text-lg text-muted-foreground leading-relaxed">
-                            Welcome to Shanu's Dental, where your smile is our masterpiece. Located in the vibrant heart of Dubai, we are more than just a dental clinic — we are a sanctuary for oral health and aesthetic excellence.
+                            Welcome to Feza Mattresses, where your comfort is our priority. Founded with a passion for quality sleep, we are more than just a mattress retailer — we are your partner in achieving restful, rejuvenating sleep every night.
                         </p>
                         <p className="text-lg text-muted-foreground leading-relaxed">
-                            Our philosophy is built on the belief that dental visits should be comfortable, transparent, and empowering. With a team of internationally trained specialists and a facility equipped with cutting-edge technology, we deliver precision treatments tailored to your unique needs. From preventative care to transformative smile makeovers, we are dedicated to elevating your dental experience.
+                            Our philosophy is built on the belief that quality sleep should be accessible, luxurious, and empowering. With a curated collection of premium mattresses and a team dedicated to understanding your sleep needs, we deliver comfort solutions tailored to your unique preferences. From memory foam to orthopedic support, we are committed to transforming how you sleep and wake up refreshed.
                         </p>
                     </motion.div>
 
@@ -40,20 +40,20 @@ export function AboutSection() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                     >
                         <div className="bg-white/40 backdrop-blur-md p-8 rounded-3xl border border-white/30 shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
-                            <h3 className="text-4xl md:text-5xl font-bold text-primary mb-2">15+</h3>
-                            <p className="text-base font-medium text-muted-foreground">Years of Excellence</p>
+                            <h3 className="text-4xl md:text-5xl font-bold text-primary mb-2">10+</h3>
+                            <p className="text-base font-medium text-muted-foreground">Years in Sleep Science</p>
                         </div>
                         <div className="bg-white/40 backdrop-blur-md p-8 rounded-3xl border border-white/30 shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
-                            <h3 className="text-4xl md:text-5xl font-bold text-primary mb-2">5k+</h3>
-                            <p className="text-base font-medium text-muted-foreground">Happy Patients</p>
+                            <h3 className="text-4xl md:text-5xl font-bold text-primary mb-2">50k+</h3>
+                            <p className="text-base font-medium text-muted-foreground">Happy Customers</p>
                         </div>
                         <div className="bg-white/40 backdrop-blur-md p-8 rounded-3xl border border-white/30 shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
-                            <h3 className="text-4xl md:text-5xl font-bold text-primary mb-2">20+</h3>
-                            <p className="text-base font-medium text-muted-foreground">Expert Specialists</p>
+                            <h3 className="text-4xl md:text-5xl font-bold text-primary mb-2">100%</h3>
+                            <p className="text-base font-medium text-muted-foreground">Premium Materials</p>
                         </div>
                         <div className="bg-white/40 backdrop-blur-md p-8 rounded-3xl border border-white/30 shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
-                            <h3 className="text-4xl md:text-5xl font-bold text-primary mb-2">4.9</h3>
-                            <p className="text-base font-medium text-muted-foreground">Google Rating</p>
+                            <h3 className="text-4xl md:text-5xl font-bold text-primary mb-2">4.8</h3>
+                            <p className="text-base font-medium text-muted-foreground">Customer Rating</p>
                         </div>
                     </motion.div>
                 </div>

@@ -51,9 +51,9 @@ export function SaleBanner() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.1 }}
             >
-              Implantation
+              Premium
               <br />
-              Turnkey
+              Collections
             </motion.h2>
 
             <motion.p
@@ -62,7 +62,7 @@ export function SaleBanner() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Our turnkey implantation service offers a complete solution for restoring your smile. From initial consultation to the final crown placement, we handle every step with precision and care using state-of-the-art technology. Enjoy a seamless experience with transparent pricing and guaranteed results.
+              Discover our exclusive premium mattress collections designed for ultimate comfort and support. Each mattress is handcrafted with the finest materials, featuring advanced technology for temperature regulation, spinal support, and durability. Experience luxury sleep at an exceptional value.
             </motion.p>
 
             <motion.div
@@ -74,7 +74,7 @@ export function SaleBanner() {
                 size="lg"
                 className="bg-foreground text-background hover:bg-foreground/90 font-medium px-6 py-5 text-sm rounded-full group"
               >
-                More Details
+                Explore Collections
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </motion.div>
@@ -95,11 +95,11 @@ export function SaleBanner() {
                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-black/15 rounded-full blur-xl" />
 
                 <Image
-                  src="/images/dental-implant.png"
-                  alt="Dental Implant"
+                  src="/images/cloud-mattress-bg.jpg"
+                  alt="Premium Mattress Collection"
                   width={600}
                   height={900}
-                  className="relative z-10 object-contain drop-shadow-2xl"
+                  className="relative z-10 object-contain drop-shadow-2xl rounded-2xl"
                 />
               </motion.div>
             </motion.div>
@@ -118,9 +118,9 @@ export function SaleBanner() {
                 {/* Badge */}
                 <div className="w-32 h-32 sm:w-56 sm:h-56 rounded-full bg-background/90 backdrop-blur-md border border-border/30 flex items-center justify-center shadow-2xl">
                   <div className="text-center">
-                    <span className="block text-xs sm:text-sm font-medium text-foreground/70">Get</span>
-                    <span className="block text-3xl sm:text-5xl font-bold text-foreground">15%</span>
-                    <span className="block text-xs sm:text-sm font-medium text-foreground/70">discount</span>
+                    <span className="block text-xs sm:text-sm font-medium text-foreground/70">Save</span>
+                    <span className="block text-3xl sm:text-5xl font-bold text-primary">20%</span>
+                    <span className="block text-xs sm:text-sm font-medium text-foreground/70">This Month</span>
                   </div>
                 </div>
               </motion.div>

@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: '/private/',
         },
-        sitemap: 'https://shanusdental.ae/sitemap.xml',
+        sitemap: 'https://fezamattresses.com/sitemap.xml',
     }
 }
