@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Facebook, Instagram, Linkedin, Twitter, Send, MapPin, Phone, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { DownloadPublicButton } from "@/components/download-public-button"
 
 export function Footer() {
   return (
@@ -108,28 +109,36 @@ export function Footer() {
             </motion.div>
           </div>
 
-          {/* Newsletter */}
+          {/* Newsletter & Downloads */}
           <div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
+              className="space-y-6"
             >
-              <h4 className="font-semibold text-lg mb-6">Newsletter</h4>
-              <p className="text-muted-foreground mb-4">
-                Subscribe to get sleep tips, new products, and exclusive offers.
-              </p>
-              <form className="space-y-2" onSubmit={(e) => e.preventDefault()}>
-                <Input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="bg-background"
-                />
-                <Button type="submit" className="w-full">
-                  Subscribe
-                </Button>
-              </form>
+              <div>
+                <h4 className="font-semibold text-lg mb-6">Newsletter</h4>
+                <p className="text-muted-foreground mb-4">
+                  Subscribe to get sleep tips, new products, and exclusive offers.
+                </p>
+                <form className="space-y-2" onSubmit={(e) => e.preventDefault()}>
+                  <Input
+                    type="email"
+                    placeholder="Enter your email"
+                    className="bg-background"
+                  />
+                  <Button type="submit" className="w-full">
+                    Subscribe
+                  </Button>
+                </form>
+              </div>
+
+              <div className="pt-4 border-t border-border/40">
+                <h4 className="font-semibold text-lg mb-4">Resources</h4>
+                <DownloadPublicButton />
+              </div>
             </motion.div>
           </div>
         </div>
