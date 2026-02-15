@@ -7,39 +7,39 @@ import { ArrowRight } from "lucide-react"
 
 const services = [
   {
-    title: "Implantation",
-    description: "We use modern implant materials and ensure long-lasting aesthetic results.",
-    image: "/dental-implant-procedure-modern-clinic.jpg",
+    title: "Beginner Program",
+    description: "Master the fundamentals with expert coaching. Learn proper technique, footwork, and court awareness.",
+    image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=800&auto=format&fit=crop",
   },
   {
-    title: "Professional Hygiene",
-    description: "A deep cleaning procedure that removes tartar, plaque, and keeps your smile healthy.",
-    image: "/dental-hygiene-cleaning-teeth-whitening.jpg",
+    title: "Intermediate Training",
+    description: "Develop advanced techniques, game strategy, and competitive skills for tournament play.",
+    image: "https://images.unsplash.com/photo-1517836357463-d25ddfcbf042?q=80&w=800&auto=format&fit=crop",
   },
   {
-    title: "Cosmetic Dentistry",
-    description: "Whitening, veneers, aesthetic restorations, and smile design.",
-    image: "/cosmetic-dentistry-beautiful-smile-veneers.jpg",
+    title: "Advanced Coaching",
+    description: "Elite-level training with specialized focus on competitive excellence and performance optimization.",
+    image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=800&auto=format&fit=crop",
   },
   {
-    title: "Orthodontics",
-    description: "Bite correction for kids and adults. Braces, aligners, individual treatment plans.",
-    image: "/orthodontics-braces-aligners-teeth.jpg",
+    title: "Junior Academy",
+    description: "Specialized program for young talents (6-12 years) with fun-based learning and skill development.",
+    image: "https://images.unsplash.com/photo-1517836357463-d25ddfcbf042?q=80&w=800&auto=format&fit=crop",
   },
   {
-    title: "Pediatric Dentistry",
-    description: "Gentle and caring dental treatment for children in a friendly environment.",
-    image: "/pediatric-dentist-child-patient.jpg",
+    title: "Ladies Program",
+    description: "Dedicated coaching for women players with personalized training plans and supportive environment.",
+    image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=800&auto=format&fit=crop",
   },
   {
-    title: "Root Canal Treatment",
-    description: "Saving natural teeth with modern endodontic procedures and pain-free treatment.",
-    image: "/root-canal-treatment-endodontics.jpg",
+    title: "Corporate Wellness",
+    description: "Team-building badminton programs and fitness training for corporate groups and organizations.",
+    image: "https://images.unsplash.com/photo-1517836357463-d25ddfcbf042?q=80&w=800&auto=format&fit=crop",
   },
   {
-    title: "Dental Surgery",
-    description: "Complex surgical procedures including extractions and bone grafting performed by experts.",
-    image: "/dental-surgery-procedure.jpg",
+    title: "Tournament Preparation",
+    description: "Intensive camps and match training to prepare athletes for competitive tournaments at all levels.",
+    image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=800&auto=format&fit=crop",
   },
 ]
 
@@ -61,7 +61,7 @@ export function ServicesSection() {
             className="text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-foreground"
             style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}
           >
-            Popular Services
+            Training Programs
           </h2>
         </motion.div>
 

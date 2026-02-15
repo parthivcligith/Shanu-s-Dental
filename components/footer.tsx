@@ -18,9 +18,9 @@ export function Footer() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h3 className="text-2xl font-bold tracking-tight mb-4">SHANU'S DENTAL</h3>
+              <h3 className="text-2xl font-bold tracking-tight mb-4">JAMES BADMINTON ACADEMY</h3>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Experience world-class dental care in a comfortable and modern environment. Your smile is our passion.
+                Elite badminton training with world-class coaches. Master the sport, achieve excellence, become a champion.
               </p>
               <div className="flex space-x-4">
                 <a href="#" className="text-muted-foreground hover:text-primary transition-colors">

@@ -5,25 +5,25 @@ import "./globals.css"
 
 export const metadata: Metadata = {
   title: {
-    default: "Shanu's Dental — Comfortable Dentistry",
-    template: "%s | Shanu's Dental"
+    default: "James Badminton Academy — Elite Badminton Training",
+    template: "%s | James Badminton Academy"
   },
-  description: "Modern dental treatment without pain and fear — in a calm atmosphere, with care for every member of your family.",
-  keywords: ["Dentist", "Dental Clinic", "Implantation", "Veneers", "Teeth Whitening", "Orthodontics", "Dental Care", "Comfortable Dentistry"],
-  authors: [{ name: "Shanu's Dental" }],
-  creator: "Shanu's Dental",
+  description: "Professional badminton academy offering elite training, coaching, and competitive programs for all skill levels. Master the sport with expert instructors.",
+  keywords: ["Badminton Academy", "Badminton Training", "Badminton Coaching", "Badminton Lessons", "Sports Academy", "Badminton Club", "Competitive Badminton"],
+  authors: [{ name: "James Badminton Academy" }],
+  creator: "James Badminton Academy",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://shanusdental.ae",
-    title: "Shanu's Dental — Comfortable Dentistry",
-    description: "Modern dental treatment without pain and fear — in a calm atmosphere, with care for every member of your family.",
-    siteName: "Shanu's Dental",
+    url: "https://jamesbaadmintonacademy.com",
+    title: "James Badminton Academy — Elite Badminton Training",
+    description: "Professional badminton academy offering elite training, coaching, and competitive programs for all skill levels. Master the sport with expert instructors.",
+    siteName: "James Badminton Academy",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shanu's Dental — Comfortable Dentistry",
-    description: "Modern dental treatment without pain and fear — in a calm atmosphere, with care for every member of your family.",
+    title: "James Badminton Academy — Elite Badminton Training",
+    description: "Professional badminton academy offering elite training, coaching, and competitive programs for all skill levels. Master the sport with expert instructors.",
   },
   robots: {
     index: true,
