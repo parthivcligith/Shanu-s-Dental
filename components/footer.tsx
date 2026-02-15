@@ -4,7 +4,6 @@ import { motion } from "framer-motion"
 import { Facebook, Instagram, Linkedin, Twitter, Send, MapPin, Phone, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { DownloadPublicButton } from "@/components/download-public-button"
 
 export function Footer() {
   return (
@@ -19,9 +18,9 @@ export function Footer() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h3 className="text-2xl font-bold tracking-tight mb-4">FEZA MATTRESSES</h3>
+              <h3 className="text-2xl font-bold tracking-tight mb-4">SHANU'S DENTAL</h3>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Experience cloud-like comfort and superior support with Feza Mattresses. Quality sleep is our passion.
+                Experience world-class dental care in a comfortable and modern environment. Your smile is our passion.
               </p>
               <div className="flex space-x-4">
                 <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
@@ -61,17 +60,17 @@ export function Footer() {
                 </li>
                 <li>
                   <a href="#services" className="text-muted-foreground hover:text-primary transition-colors block">
-                    Products
+                    Our Services
                   </a>
                 </li>
                 <li>
                   <a href="#doctors" className="text-muted-foreground hover:text-primary transition-colors block">
-                    Collections
+                    Meet the Team
                   </a>
                 </li>
                 <li>
                   <a href="#" className="text-muted-foreground hover:text-primary transition-colors block">
-                    Customer Reviews
+                    Patient Reviews
                   </a>
                 </li>
                 <li>
@@ -95,50 +94,42 @@ export function Footer() {
               <ul className="space-y-4">
                 <li className="flex items-start space-x-3 text-muted-foreground">
                   <MapPin className="h-5 w-5 mt-0.5 shrink-0" />
-                  <span>Premium Showroom, Dubai<br />UAE</span>
+                  <span>Office 402, Al Barsha Business Center<br />Al Barsha 1, Dubai, UAE</span>
                 </li>
                 <li className="flex items-center space-x-3 text-muted-foreground">
                   <Phone className="h-5 w-5 shrink-0" />
-                  <span>+971 4 500 0000</span>
+                  <span>+971 4 321 9876</span>
                 </li>
                 <li className="flex items-center space-x-3 text-muted-foreground">
                   <Mail className="h-5 w-5 shrink-0" />
-                  <span>hello@fezamattresses.com</span>
+                  <span>info@shanusdental.com</span>
                 </li>
               </ul>
             </motion.div>
           </div>
 
-          {/* Newsletter & Downloads */}
+          {/* Newsletter */}
           <div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="space-y-6"
             >
-              <div>
-                <h4 className="font-semibold text-lg mb-6">Newsletter</h4>
-                <p className="text-muted-foreground mb-4">
-                  Subscribe to get sleep tips, new products, and exclusive offers.
-                </p>
-                <form className="space-y-2" onSubmit={(e) => e.preventDefault()}>
-                  <Input
-                    type="email"
-                    placeholder="Enter your email"
-                    className="bg-background"
-                  />
-                  <Button type="submit" className="w-full">
-                    Subscribe
-                  </Button>
-                </form>
-              </div>
-
-              <div className="pt-4 border-t border-border/40">
-                <h4 className="font-semibold text-lg mb-4">Resources</h4>
-                <DownloadPublicButton />
-              </div>
+              <h4 className="font-semibold text-lg mb-6">Newsletter</h4>
+              <p className="text-muted-foreground mb-4">
+                Subscribe to get the latest updates and offers.
+              </p>
+              <form className="space-y-2" onSubmit={(e) => e.preventDefault()}>
+                <Input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="bg-background"
+                />
+                <Button type="submit" className="w-full">
+                  Subscribe
+                </Button>
+              </form>
             </motion.div>
           </div>
         </div>
@@ -152,7 +143,7 @@ export function Footer() {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <p className="text-sm text-muted-foreground text-center md:text-left">
-            © 2025 Feza Mattresses. All rights reserved.
+            © 2025 Shanu's Dental. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm text-muted-foreground">
             <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>

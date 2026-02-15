@@ -5,25 +5,25 @@ import "./globals.css"
 
 export const metadata: Metadata = {
   title: {
-    default: "Feza Mattresses — Premium Sleep Comfort",
-    template: "%s | Feza Mattresses"
+    default: "Shanu's Dental — Comfortable Dentistry",
+    template: "%s | Shanu's Dental"
   },
-  description: "Experience the ultimate in sleep comfort with Feza Mattresses. Premium quality mattresses designed for perfect rest and support — wake up refreshed every morning.",
-  keywords: ["Mattresses", "Sleep", "Comfort", "Premium Mattresses", "Beds", "Sleep Solutions", "Orthopedic Support", "Quality Sleep"],
-  authors: [{ name: "Feza Mattresses" }],
-  creator: "Feza Mattresses",
+  description: "Modern dental treatment without pain and fear — in a calm atmosphere, with care for every member of your family.",
+  keywords: ["Dentist", "Dental Clinic", "Implantation", "Veneers", "Teeth Whitening", "Orthodontics", "Dental Care", "Comfortable Dentistry"],
+  authors: [{ name: "Shanu's Dental" }],
+  creator: "Shanu's Dental",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://fezamattresses.com",
-    title: "Feza Mattresses — Premium Sleep Comfort",
-    description: "Experience the ultimate in sleep comfort with Feza Mattresses. Premium quality mattresses designed for perfect rest and support — wake up refreshed every morning.",
-    siteName: "Feza Mattresses",
+    url: "https://shanusdental.ae",
+    title: "Shanu's Dental — Comfortable Dentistry",
+    description: "Modern dental treatment without pain and fear — in a calm atmosphere, with care for every member of your family.",
+    siteName: "Shanu's Dental",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Feza Mattresses — Premium Sleep Comfort",
-    description: "Experience the ultimate in sleep comfort with Feza Mattresses. Premium quality mattresses designed for perfect rest and support — wake up refreshed every morning.",
+    title: "Shanu's Dental — Comfortable Dentistry",
+    description: "Modern dental treatment without pain and fear — in a calm atmosphere, with care for every member of your family.",
   },
   robots: {
     index: true,

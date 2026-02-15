@@ -1,6 +1,8 @@
 import { Navigation } from "@/components/navigation"
 import { HeroSection } from "@/components/hero-section"
+import { Hero as AnimatedHero } from "@/components/ui/animated-hero"
 import { SaleBanner } from "@/components/sale-banner"
+import { DoctorsSection } from "@/components/doctors-section"
 import { ServicesSection } from "@/components/services-section"
 import { Footer } from "@/components/footer"
 
@@ -13,79 +15,86 @@ import { Contact2 } from "@/components/ui/contact-2"
 
 const parallaxImages = [
   {
-    src: "/images/cloud-mattress-bg.jpg",
-    alt: "Premium mattress collection",
-    title: "FEZA MATTRESSES",
-    subtitle: "Sleep in luxury",
+    src: "/images/dental-chair-main.jpg",
+    alt: "Modern dental clinic chair",
+    title: "SHANU'S DENTAL",
+    subtitle: "Excellence in every detail",
   },
   {
-    src: "https://images.unsplash.com/photo-1540932239986-310128078ceb?q=80&w=1280&auto=format&fit=crop",
-    alt: "Comfortable bed setup",
+    src: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1280&auto=format&fit=crop",
+    alt: "Dentist working with patient",
   },
   {
-    src: "https://images.unsplash.com/photo-1577259873294-b60c3a15061f?q=80&w=1280&auto=format&fit=crop",
-    alt: "Luxury pillow and bedding",
+    src: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1280&auto=format&fit=crop",
+    alt: "Dental tools close up",
   },
   {
-    src: "https://images.unsplash.com/photo-1540932239986-310128078ceb?q=80&w=1280&auto=format&fit=crop",
-    alt: "Peaceful sleep environment",
+    src: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?q=80&w=1280&auto=format&fit=crop",
+    alt: "Smiling confident woman",
   },
   {
-    src: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=1280&auto=format&fit=crop",
-    alt: "Modern bedroom design",
+    src: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=1280&auto=format&fit=crop",
+    alt: "Dental model",
   },
   {
-    src: "https://images.unsplash.com/photo-1505692952047-643ca63fc455?q=80&w=1280&auto=format&fit=crop",
-    alt: "Quality sleep accessories",
+    src: "https://images.unsplash.com/photo-1571772996211-2f02c9727629?q=80&w=1280&auto=format&fit=crop",
+    alt: "Dental hygiene tools",
   },
   {
-    src: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=1280&auto=format&fit=crop",
-    alt: "Premium mattress comfort",
+    src: "https://images.unsplash.com/photo-1600170311833-c2cf5280ce49?q=80&w=1280&auto=format&fit=crop",
+    alt: "Happy patient smiling",
   },
 ];
 
-const mattressProducts = [
+const services = [
   {
-    id: "memory-foam",
-    title: "Memory Foam Mattress",
-    description: "Pressure-relieving memory foam technology that molds to your body, providing personalized comfort.",
+    id: "implantation",
+    title: "Implantation",
+    description: "We use modern implant materials and ensure long-lasting aesthetic results.",
     href: "#",
-    image: "https://images.unsplash.com/photo-1540932239986-310128078ceb?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop",
   },
   {
-    id: "orthopedic",
-    title: "Orthopedic Support",
-    description: "Specially designed with firm support for spinal alignment and relief from back and neck pain.",
+    id: "professional-hygiene",
+    title: "Professional Hygiene",
+    description: "A deep cleaning procedure that removes tartar, plaque, and keeps your smile healthy.",
     href: "#",
-    image: "https://images.unsplash.com/photo-1577259873294-b60c3a15061f?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop",
   },
   {
-    id: "cooling-gel",
-    title: "Gel-Infused Cooling",
-    description: "Advanced cooling gel technology keeps you cool throughout the night for uninterrupted sleep.",
+    id: "cosmetic-dentistry",
+    title: "Cosmetic Dentistry",
+    description: "Whitening, veneers, aesthetic restorations, and smile design.",
     href: "#",
-    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=800&auto=format&fit=crop",
   },
   {
-    id: "natural-latex",
-    title: "Natural Latex",
-    description: "100% natural latex construction for eco-friendly, durable, and hypoallergenic comfort.",
+    id: "orthodontics",
+    title: "Orthodontics",
+    description: "Bite correction for kids and adults. Braces, aligners, individual treatment plans.",
     href: "#",
-    image: "https://images.unsplash.com/photo-1505692952047-643ca63fc455?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=800&auto=format&fit=crop",
   },
   {
-    id: "hybrid",
-    title: "Hybrid Comfort",
-    description: "Perfect blend of springs and foam for the ultimate balance of support and softness.",
+    id: "pediatric-dentistry",
+    title: "Pediatric Dentistry",
+    description: "Gentle and caring dental treatment for children in a friendly environment.",
     href: "#",
-    image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1571772996211-2f02c9727629?q=80&w=800&auto=format&fit=crop",
   },
   {
-    id: "pillow-top",
-    title: "Premium Pillow-Top",
-    description: "Luxurious quilted surface with extra cushioning for cloud-like comfort and elegance.",
+    id: "root-canal-treatment",
+    title: "Root Canal Treatment",
+    description: "Saving natural teeth with modern endodontic procedures and pain-free treatment.",
     href: "#",
-    image: "https://images.unsplash.com/photo-1540932239986-310128078ceb?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?q=80&w=800&auto=format&fit=crop",
+  },
+  {
+    id: "dental-surgery",
+    title: "Dental Surgery",
+    description: "Complex surgical procedures including extractions and bone grafting performed by experts.",
+    href: "#",
+    image: "https://images.unsplash.com/photo-1600170311833-c2cf5280ce49?q=80&w=800&auto=format&fit=crop",
   },
 ];
 
@@ -98,26 +107,27 @@ export default function Home() {
       <HeroSection />
       <div className="py-10 bg-background overflow-hidden">
         <VelocityScroll
-          text="FEZA MATTRESSES PREMIUM SLEEP COMFORT"
+          text="SHANU'S DENTAL COMFORTABLE DENTISTRY"
           default_velocity={1}
           className="font-display text-center text-4xl font-bold tracking-[-0.02em] text-foreground/10 drop-shadow-sm md:text-7xl md:leading-[5rem]"
         />
       </div>
       <AboutSection />
-      <ServicesSection />
+      <AnimatedHero />
       <Gallery4
-        title="Mattress Collections"
-        description="Explore our premium collection of mattresses designed for every sleep preference and budget."
-        items={mattressProducts}
+        title="Popular Services"
+        description="We offer a wide range of dental services to ensure your smile is healthy and beautiful."
+        items={services}
       />
       <SaleBanner />
+      <DoctorsSection />
       <ZoomParallax images={parallaxImages} />
       <Contact2
         title="Get in Touch"
-        description="Have questions about our mattresses? We are here to help you find your perfect sleep solution."
-        phone="+971 4 500 0000"
-        email="hello@fezamattresses.com"
-        web={{ label: "fezamattresses.com", url: "#" }}
+        description="We are here to help you with your dental needs. Book an appointment or ask us anything."
+        phone="+380 (44) 123-4567"
+        email="info@shanusdental.com"
+        web={{ label: "shanusdental.com", url: "#" }}
       />
       <Footer />
     </main>
