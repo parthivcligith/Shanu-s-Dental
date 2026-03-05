@@ -5,6 +5,7 @@ import { useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import Image from "next/image"
+import { whatsappUrl } from "@/lib/whatsapp"
 
 
 
@@ -51,9 +52,9 @@ export function SaleBanner() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.1 }}
             >
-              Implantation
+              Dental
               <br />
-              Turnkey
+              Crowns
             </motion.h2>
 
             <motion.p
@@ -62,7 +63,7 @@ export function SaleBanner() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Our turnkey implantation service offers a complete solution for restoring your smile. From initial consultation to the final crown placement, we handle every step with precision and care using state-of-the-art technology. Enjoy a seamless experience with transparent pricing and guaranteed results.
+              Restore the strength and beauty of your smile with our premium dental crowns. We provide custom-fitted, durable, and natural-looking crowns designed to protect damaged teeth and enhance your overall oral health. Experience a comfortable, seamless process from preparation to final placement with guaranteed transparent pricing.
             </motion.p>
 
             <motion.div
@@ -70,13 +71,15 @@ export function SaleBanner() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              <Button
-                size="lg"
-                className="bg-foreground text-background hover:bg-foreground/90 font-medium px-6 py-5 text-sm rounded-full group"
-              >
-                More Details
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <a href={whatsappUrl("Hello! I'd like to get more details about your Dental Crowns service and pricing at Shanu's Dental Clinic.")} target="_blank" rel="noopener noreferrer">
+                <Button
+                  size="lg"
+                  className="bg-foreground text-background hover:bg-foreground/90 font-medium px-6 py-5 text-sm rounded-full group"
+                >
+                  More Details
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </a>
             </motion.div>
           </motion.div>
 

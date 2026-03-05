@@ -2,7 +2,6 @@ import { Navigation } from "@/components/navigation"
 import { HeroSection } from "@/components/hero-section"
 import { Hero as AnimatedHero } from "@/components/ui/animated-hero"
 import { SaleBanner } from "@/components/sale-banner"
-import { DoctorsSection } from "@/components/doctors-section"
 import { ServicesSection } from "@/components/services-section"
 import { Footer } from "@/components/footer"
 
@@ -10,7 +9,7 @@ import { VelocityScroll } from "@/components/ui/scroll-based-velocity"
 
 import { ZoomParallax } from "@/components/ui/zoom-parallax"
 
-import { Gallery4 } from "@/components/ui/gallery4";
+import { PopularServices } from "@/components/popular-services";
 import { Contact2 } from "@/components/ui/contact-2"
 
 const parallaxImages = [
@@ -46,58 +45,6 @@ const parallaxImages = [
   },
 ];
 
-const services = [
-  {
-    id: "implantation",
-    title: "Implantation",
-    description: "We use modern implant materials and ensure long-lasting aesthetic results.",
-    href: "#",
-    image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop",
-  },
-  {
-    id: "professional-hygiene",
-    title: "Professional Hygiene",
-    description: "A deep cleaning procedure that removes tartar, plaque, and keeps your smile healthy.",
-    href: "#",
-    image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop",
-  },
-  {
-    id: "cosmetic-dentistry",
-    title: "Cosmetic Dentistry",
-    description: "Whitening, veneers, aesthetic restorations, and smile design.",
-    href: "#",
-    image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=800&auto=format&fit=crop",
-  },
-  {
-    id: "orthodontics",
-    title: "Orthodontics",
-    description: "Bite correction for kids and adults. Braces, aligners, individual treatment plans.",
-    href: "#",
-    image: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=800&auto=format&fit=crop",
-  },
-  {
-    id: "pediatric-dentistry",
-    title: "Pediatric Dentistry",
-    description: "Gentle and caring dental treatment for children in a friendly environment.",
-    href: "#",
-    image: "https://images.unsplash.com/photo-1571772996211-2f02c9727629?q=80&w=800&auto=format&fit=crop",
-  },
-  {
-    id: "root-canal-treatment",
-    title: "Root Canal Treatment",
-    description: "Saving natural teeth with modern endodontic procedures and pain-free treatment.",
-    href: "#",
-    image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?q=80&w=800&auto=format&fit=crop",
-  },
-  {
-    id: "dental-surgery",
-    title: "Dental Surgery",
-    description: "Complex surgical procedures including extractions and bone grafting performed by experts.",
-    href: "#",
-    image: "https://images.unsplash.com/photo-1600170311833-c2cf5280ce49?q=80&w=800&auto=format&fit=crop",
-  },
-];
-
 import { AboutSection } from "@/components/about-section"
 
 export default function Home() {
@@ -114,20 +61,16 @@ export default function Home() {
       </div>
       <AboutSection />
       <AnimatedHero />
-      <Gallery4
-        title="Popular Services"
-        description="We offer a wide range of dental services to ensure your smile is healthy and beautiful."
-        items={services}
-      />
+      <PopularServices />
       <SaleBanner />
-      <DoctorsSection />
       <ZoomParallax images={parallaxImages} />
       <Contact2
         title="Get in Touch"
         description="We are here to help you with your dental needs. Book an appointment or ask us anything."
-        phone="+380 (44) 123-4567"
-        email="info@shanusdental.com"
-        web={{ label: "shanusdental.com", url: "#" }}
+        phone="+971 56 537 6630 | +971 4 344 9838"
+        email="Drshanusclinic@gmail.com"
+        address={{ label: "Office no: 903, Park avenue, Dubai silicon oasis", url: "https://share.google/6r7QQjUqPFvVmPsWx" }}
+        web={{ label: "shanusdentalclinic.ae", url: "https://shanusdentalclinic.ae" }}
       />
       <Footer />
     </main>

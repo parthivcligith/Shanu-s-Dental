@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { MoveRight, PhoneCall } from "lucide-react";
+import { whatsappUrl } from "@/lib/whatsapp";
 import { Button } from "@/components/ui/button";
 
 function Hero() {
@@ -39,9 +40,11 @@ function Hero() {
                     {/* Text Content */}
                     <div className="flex gap-8 flex-col items-center lg:items-start text-center lg:text-left">
                         <div>
-                            <Button variant="secondary" size="sm" className="gap-4">
-                                New Patient Special <MoveRight className="w-4 h-4" />
-                            </Button>
+                            <a href={whatsappUrl("Hello! I'm a new patient and I'd like to know about your new patient special offer.")} target="_blank" rel="noopener noreferrer">
+                                <Button variant="secondary" size="sm" className="gap-4">
+                                    New Patient Special <MoveRight className="w-4 h-4" />
+                                </Button>
+                            </a>
                         </div>
                         <div className="flex gap-4 flex-col">
                             <h1 className="text-5xl md:text-7xl max-w-2xl tracking-tighter font-regular">
@@ -77,12 +80,16 @@ function Hero() {
                             </p>
                         </div>
                         <div className="flex flex-row gap-3">
-                            <Button size="lg" className="gap-4" variant="outline">
-                                Book Consultation <PhoneCall className="w-4 h-4" />
-                            </Button>
-                            <Button size="lg" className="gap-4">
-                                View Services <MoveRight className="w-4 h-4" />
-                            </Button>
+                            <a href={whatsappUrl("Hello! I'd like to book a dental consultation at Shanu's Dental Clinic. Could you please let me know your available slots?")} target="_blank" rel="noopener noreferrer">
+                                <Button size="lg" className="gap-4" variant="outline">
+                                    Book Consultation <PhoneCall className="w-4 h-4" />
+                                </Button>
+                            </a>
+                            <a href={whatsappUrl("Hello! I'd like to know more about the dental services you offer at Shanu's Dental Clinic.")} target="_blank" rel="noopener noreferrer">
+                                <Button size="lg" className="gap-4">
+                                    View Services <MoveRight className="w-4 h-4" />
+                                </Button>
+                            </a>
                         </div>
                     </div>
 

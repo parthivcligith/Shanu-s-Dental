@@ -2,6 +2,8 @@
 
 import { motion, useScroll, useTransform, useSpring } from "framer-motion"
 import { useRef } from "react"
+import Image from "next/image"
+import { whatsappUrl } from "@/lib/whatsapp"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import { AuroraBackground } from "@/components/ui/aurora-background"
@@ -125,13 +127,15 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7 }}
             >
-              <Button
-                size="lg"
-                className="bg-foreground text-background hover:bg-foreground/90 font-semibold px-8 py-6 text-base rounded-full group"
-              >
-                Our Services
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <a href={whatsappUrl("Hello! I'd like to learn more about your dental services and book an appointment.")} target="_blank" rel="noopener noreferrer">
+                <Button
+                  size="lg"
+                  className="bg-foreground text-background hover:bg-foreground/90 font-semibold px-8 py-6 text-base rounded-full group"
+                >
+                  Our Services
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </a>
             </motion.div>
           </motion.div>
 

@@ -1,24 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { whatsappUrl } from "@/lib/whatsapp";
 
 interface Contact2Props {
     title?: string;
     description?: string;
     phone?: string;
     email?: string;
+    address?: { label: string; url: string };
     web?: { label: string; url: string };
 }
 
 export const Contact2 = ({
     title = "Contact Us",
     description = "We are available for questions, feedback, or collaboration opportunities. Let us know how we can help!",
-    phone = "+971 4 321 9876",
-    email = "info@shanusdental.ae",
-    web = { label: "shanusdental.ae", url: "https://shanusdental.ae" },
+    phone = "+971 56 537 6630 | +971 4 344 9838",
+    email = "Drshanusclinic@gmail.com",
+    address,
+    web = { label: "shanusdentalclinic.ae", url: "https://shanusdentalclinic.ae" },
 }: Contact2Props) => {
     return (
         <section className="relative py-32 overflow-hidden">
@@ -54,12 +57,22 @@ export const Contact2 = ({
                                         {email}
                                     </a>
                                 </li>
-                                <li className="flex items-center gap-3 text-muted-foreground text-sm">
-                                    <span className="font-semibold text-foreground min-w-[50px]">Web:</span>
-                                    <a href={web.url} target="_blank" className="hover:text-primary transition-colors underline decoration-primary/30 underline-offset-4 truncate">
-                                        {web.label}
-                                    </a>
-                                </li>
+                                {address && (
+                                    <li className="flex items-start gap-3 text-muted-foreground text-sm">
+                                        <span className="font-semibold text-foreground min-w-[50px] mt-0.5">Address:</span>
+                                        <a href={address.url} target="_blank" className="hover:text-primary transition-colors underline decoration-primary/30 underline-offset-4 text-left">
+                                            {address.label}
+                                        </a>
+                                    </li>
+                                )}
+                                {web && (
+                                    <li className="flex items-center gap-3 text-muted-foreground text-sm">
+                                        <span className="font-semibold text-foreground min-w-[50px]">Web:</span>
+                                        <a href={web.url} target="_blank" className="hover:text-primary transition-colors underline decoration-primary/30 underline-offset-4 truncate">
+                                            {web.label}
+                                        </a>
+                                    </li>
+                                )}
                             </ul>
                         </div>
                     </div>
@@ -88,7 +101,16 @@ export const Contact2 = ({
                             <Label htmlFor="message" className="text-sm font-medium">Message</Label>
                             <Textarea placeholder="Type your message here..." id="message" className="min-h-[150px] bg-white/50 resize-none" />
                         </div>
-                        <Button className="w-full h-12 text-base font-medium shadow-md hover:shadow-lg transition-all mt-2">
+                        <Button
+                            className="w-full h-12 text-base font-medium shadow-md hover:shadow-lg transition-all mt-2"
+                            onClick={() => {
+                                const name = (document.getElementById('name') as HTMLInputElement)?.value || '';
+                                const subject = (document.getElementById('subject') as HTMLInputElement)?.value || '';
+                                const message = (document.getElementById('message') as HTMLTextAreaElement)?.value || '';
+                                const text = `Hello! My name is ${name}.\nSubject: ${subject}\n\n${message}`;
+                                window.open(whatsappUrl(text), '_blank');
+                            }}
+                        >
                             Send Message
                         </Button>
                     </div>
@@ -141,7 +163,7 @@ export const Contact2 = ({
                     <div className="flex flex-col gap-6 h-full min-h-[400px] xl:min-h-0">
                         <div className="h-full w-full rounded-2xl border bg-white/60 backdrop-blur-sm shadow-md overflow-hidden relative">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d231256.4714879207!2d55.15376867623147!3d25.16688647610636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2sDubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sae!4v1710345678901!5m2!1sen!2sae"
+                                src="https://maps.google.com/maps?q=496M%2BQC+Dubai+-+United+Arab+Emirates&t=&z=15&ie=UTF8&iwloc=&output=embed"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0, minHeight: '100%' }}

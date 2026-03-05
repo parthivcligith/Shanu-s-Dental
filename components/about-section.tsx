@@ -18,17 +18,17 @@ export function AboutSection() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <div className="inline-block px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary text-sm font-medium tracking-wide">
-                            WHO WE ARE
+                        <div className="inline-block px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary text-sm font-medium tracking-wide uppercase">
+                            Our Philosophy
                         </div>
                         <h2 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight">
-                            Redefining Dental Care in Dubai
+                            About Us
                         </h2>
-                        <p className="text-lg text-muted-foreground leading-relaxed">
-                            Welcome to Shanu's Dental, where your smile is our masterpiece. Located in the vibrant heart of Dubai, we are more than just a dental clinic — we are a sanctuary for oral health and aesthetic excellence.
+                        <p className="text-lg text-muted-foreground leading-relaxed font-medium">
+                            In the rhythm of your everyday hustle, your smile is your greatest asset. At Dr. SHANU'S DENTAL CLINIC we don’t just treat your teeth, we care for you. We have designed every part of our practice to ensure your comfort, from our modern technology to gentle approach. Our goal is simple, we want every patient to walk out of our doors with a great smile and heartfelt sense of confidence and care.
                         </p>
                         <p className="text-lg text-muted-foreground leading-relaxed">
-                            Our philosophy is built on the belief that dental visits should be comfortable, transparent, and empowering. With a team of internationally trained specialists and a facility equipped with cutting-edge technology, we deliver precision treatments tailored to your unique needs. From preventative care to transformative smile makeovers, we are dedicated to elevating your dental experience.
+                            We provide you with personalised care and treatment tailored to your unique lifestyle and goals. We understand no two smiles are the same, which is why we give customised, advanced treatment and comprehensive range of services with complete transparency of the treatment plan.
                         </p>
                     </motion.div>
 

@@ -4,6 +4,11 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/images/favv-removebg-preview.png",
+    shortcut: "/images/favv-removebg-preview.png",
+    apple: "/images/favv-removebg-preview.png",
+  },
   title: {
     default: "Shanu's Dental — Comfortable Dentistry",
     template: "%s | Shanu's Dental"
@@ -15,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://shanusdental.ae",
+    url: "https://shanusdentalclinic.ae",
     title: "Shanu's Dental — Comfortable Dentistry",
     description: "Modern dental treatment without pain and fear — in a calm atmosphere, with care for every member of your family.",
     siteName: "Shanu's Dental",

@@ -4,6 +4,8 @@ import { motion } from "framer-motion"
 import { Facebook, Instagram, Linkedin, Twitter, Send, MapPin, Phone, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import Image from "next/image"
+import { whatsappUrl } from "@/lib/whatsapp"
 
 export function Footer() {
   return (
@@ -18,7 +20,14 @@ export function Footer() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h3 className="text-2xl font-bold tracking-tight mb-4">SHANU'S DENTAL</h3>
+              <a href="#home" className="flex items-center gap-2 mb-4">
+                <div className="relative h-10 w-10 shrink-0">
+                  <Image src="/images/favv-removebg-preview.png" alt="Shanu's Dental Icon" fill className="object-contain" />
+                </div>
+                <div className="relative h-12 w-36">
+                  <Image src="/images/logos.png" alt="Shanu's Dental Logo" fill className="object-contain object-left" />
+                </div>
+              </a>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Experience world-class dental care in a comfortable and modern environment. Your smile is our passion.
               </p>
@@ -94,15 +103,17 @@ export function Footer() {
               <ul className="space-y-4">
                 <li className="flex items-start space-x-3 text-muted-foreground">
                   <MapPin className="h-5 w-5 mt-0.5 shrink-0" />
-                  <span>Office 402, Al Barsha Business Center<br />Al Barsha 1, Dubai, UAE</span>
+                  <a href="https://share.google/6r7QQjUqPFvVmPsWx" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors text-left">
+                    <span>Office no: 903<br />Park avenue<br />Dubai silicon oasis</span>
+                  </a>
                 </li>
-                <li className="flex items-center space-x-3 text-muted-foreground">
-                  <Phone className="h-5 w-5 shrink-0" />
-                  <span>+971 4 321 9876</span>
+                <li className="flex items-start space-x-3 text-muted-foreground">
+                  <Phone className="h-5 w-5 shrink-0 mt-0.5" />
+                  <span className="whitespace-pre-line">+971 56 537 6630<br />+971 4 344 9838</span>
                 </li>
                 <li className="flex items-center space-x-3 text-muted-foreground">
                   <Mail className="h-5 w-5 shrink-0" />
-                  <span>info@shanusdental.com</span>
+                  <span>Drshanusclinic@gmail.com</span>
                 </li>
               </ul>
             </motion.div>
@@ -125,8 +136,19 @@ export function Footer() {
                   type="email"
                   placeholder="Enter your email"
                   className="bg-background"
+                  id="footer-email"
                 />
-                <Button type="submit" className="w-full">
+                <Button
+                  type="button"
+                  className="w-full"
+                  onClick={() => {
+                    const email = (document.getElementById('footer-email') as HTMLInputElement)?.value || '';
+                    const text = email
+                      ? `Hello! I'd like to subscribe to updates from Shanu's Dental. My email is: ${email}`
+                      : `Hello! I'd like to subscribe to updates from Shanu's Dental Clinic.`;
+                    window.open(whatsappUrl(text), '_blank');
+                  }}
+                >
                   Subscribe
                 </Button>
               </form>

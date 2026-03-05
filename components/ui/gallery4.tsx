@@ -1,16 +1,7 @@
 "use client";
 
-import { ArrowLeft, ArrowRight } from "lucide-react";
-import { useEffect, useState, useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-
-import { Button } from "@/components/ui/button";
-import {
-    Carousel,
-    CarouselApi,
-    CarouselContent,
-    CarouselItem,
-} from "@/components/ui/carousel";
+import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 export interface Gallery4Item {
     id: string;
@@ -79,136 +70,82 @@ const Gallery4 = ({
     description = "Discover how leading companies and developers are leveraging modern web technologies to build exceptional digital experiences. These case studies showcase real-world applications and success stories.",
     items = data,
 }: Gallery4Props) => {
-    const [carouselApi, setCarouselApi] = useState<CarouselApi>();
-    const [canScrollPrev, setCanScrollPrev] = useState(false);
-    const [canScrollNext, setCanScrollNext] = useState(false);
-    const [currentSlide, setCurrentSlide] = useState(0);
-
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect(() => {
-        const checkMobile = () => {
-            setIsMobile(window.innerWidth < 768);
-        };
-        checkMobile();
-        window.addEventListener("resize", checkMobile);
-        return () => window.removeEventListener("resize", checkMobile);
-    }, []);
-
-    const sectionRef = useRef<HTMLElement>(null);
-    const { scrollYProgress } = useScroll({
-        target: sectionRef,
-        offset: ["start end", "end start"],
-    });
-    const x = useTransform(scrollYProgress, [0, 1], ["0px", "-400px"]);
-
-    useEffect(() => {
-        if (!carouselApi) {
-            return;
-        }
-        const updateSelection = () => {
-            setCanScrollPrev(carouselApi.canScrollPrev());
-            setCanScrollNext(carouselApi.canScrollNext());
-            setCurrentSlide(carouselApi.selectedScrollSnap());
-        };
-        updateSelection();
-        carouselApi.on("select", updateSelection);
-        return () => {
-            carouselApi.off("select", updateSelection);
-        };
-    }, [carouselApi]);
 
     return (
-        <section id="services" className="py-32" ref={sectionRef}>
-            <div className="container mx-auto">
-                <div className="mb-8 flex items-end justify-between md:mb-14 lg:mb-16">
-                    <div className="flex flex-col gap-4">
-                        <h2 className="text-3xl font-medium md:text-4xl lg:text-5xl">
-                            {title}
-                        </h2>
-                        <p className="max-w-lg text-muted-foreground">{description}</p>
-                    </div>
-                    <div className="hidden shrink-0 gap-2 md:flex">
-                        <Button
-                            size="icon"
-                            variant="ghost"
-                            onClick={() => {
-                                carouselApi?.scrollPrev();
-                            }}
-                            disabled={!canScrollPrev}
-                            className="disabled:pointer-events-auto"
-                        >
-                            <ArrowLeft className="size-5" />
-                        </Button>
-                        <Button
-                            size="icon"
-                            variant="ghost"
-                            onClick={() => {
-                                carouselApi?.scrollNext();
-                            }}
-                            disabled={!canScrollNext}
-                            className="disabled:pointer-events-auto"
-                        >
-                            <ArrowRight className="size-5" />
-                        </Button>
-                    </div>
+        <section id="services" className="py-24 bg-gradient-to-b from-transparent to-background">
+            <div className="container mx-auto px-4 max-w-7xl">
+                <div className="mb-16 text-center max-w-3xl mx-auto">
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                        viewport={{ once: true }}
+                        className="text-4xl font-bold md:text-5xl lg:text-5xl text-foreground mb-6 tracking-tight"
+                    >
+                        {title}
+                    </motion.h2>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.1 }}
+                        viewport={{ once: true }}
+                        className="text-lg text-muted-foreground leading-relaxed"
+                    >
+                        {description}
+                    </motion.p>
                 </div>
-            </div>
-            <motion.div className="w-full" style={{ x: isMobile ? 0 : x }}>
-                <Carousel
-                    setApi={setCarouselApi}
-                    opts={{
-                        breakpoints: {
-                            "(max-width: 768px)": {
-                                dragFree: true,
-                            },
-                        },
-                    }}
-                >
-                    <CarouselContent className="ml-0 2xl:ml-[max(8rem,calc(50vw-700px))] 2xl:mr-[max(0rem,calc(50vw-700px))]">
-                        {items.map((item) => (
-                            <CarouselItem
-                                key={item.id}
-                                className="max-w-[320px] pl-[20px] lg:max-w-[360px]"
-                            >
-                                <a href={item.href} className="group rounded-xl">
-                                    <div className="group relative h-full min-h-[27rem] max-w-full overflow-hidden rounded-xl md:aspect-[5/4] lg:aspect-[16/9]">
-                                        <img
-                                            src={item.image}
-                                            alt={item.title}
-                                            className="absolute h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
-                                        />
-                                        <div className="absolute inset-0 h-full bg-[linear-gradient(hsl(var(--primary)/0),hsl(var(--primary)/0.4),hsl(var(--primary)/0.8)_100%)] mix-blend-multiply" />
-                                        <div className="absolute inset-x-0 bottom-0 flex flex-col items-start p-6 text-primary-foreground md:p-8">
-                                            <div className="mb-2 pt-4 text-xl font-semibold md:mb-3 md:pt-4 lg:pt-4">
-                                                {item.title}
-                                            </div>
-                                            <div className="mb-8 line-clamp-2 md:mb-12 lg:mb-9">
-                                                {item.description}
-                                            </div>
-                                            <div className="flex items-center text-sm">
-                                                Read more{" "}
-                                                <ArrowRight className="ml-2 size-5 transition-transform group-hover:translate-x-1" />
-                                            </div>
+
+                {/* Scrollable Container */}
+                <div className="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+                    {items.map((item, index) => (
+                        <motion.div
+                            key={item.id}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.1 * index }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            className="group relative h-[420px] w-[85vw] sm:w-[350px] lg:w-[400px] shrink-0 snap-center [perspective:1000px] cursor-pointer"
+                        >
+                            <div className="absolute w-full h-full transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] shadow-xl rounded-2xl">
+                                {/* Front Side */}
+                                <div className="absolute inset-0 w-full h-full rounded-2xl overflow-hidden [backface-visibility:hidden]">
+                                    <img
+                                        src={item.image}
+                                        alt={item.title}
+                                        className="h-full w-full object-cover transition-transform duration-700"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/10 mix-blend-multiply" />
+                                    <div className="absolute inset-x-0 bottom-0 p-8 flex flex-col justify-end">
+                                        <h3 className="text-3xl font-bold tracking-tight text-white">{item.title}</h3>
+                                        <div className="mt-6 flex items-center text-sm font-semibold uppercase tracking-widest text-primary">
+                                            Hover for details <ArrowRight className="ml-2 h-4 w-4" />
                                         </div>
                                     </div>
-                                </a>
-                            </CarouselItem>
-                        ))}
-                    </CarouselContent>
-                </Carousel>
-                <div className="mt-8 flex justify-center gap-2">
-                    {items.map((_, index) => (
-                        <button
-                            key={index}
-                            className={`h-2 w-2 rounded-full transition-colors ${currentSlide === index ? "bg-primary" : "bg-primary/20"
-                                }`}
-                            onClick={() => carouselApi?.scrollTo(index)}
-                            aria-label={`Go to slide ${index + 1}`}
-                        />
+                                </div>
+
+                                {/* Back Side */}
+                                <div className="absolute inset-0 w-full h-full rounded-2xl bg-white dark:bg-zinc-900 border-2 border-primary/20 p-8 flex flex-col items-center justify-center text-center [backface-visibility:hidden] [transform:rotateY(180deg)] shadow-2xl">
+                                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+                                        <svg className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </div>
+                                    <h3 className="text-2xl font-bold mb-4 text-foreground">{item.title}</h3>
+                                    <p className="text-base text-muted-foreground mb-8 leading-relaxed line-clamp-5 px-2">
+                                        {item.description}
+                                    </p>
+                                    <a
+                                        href={item.href}
+                                        className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-primary text-primary-foreground font-semibold transition-transform hover:scale-105 mt-auto"
+                                    >
+                                        Learn More
+                                    </a>
+                                </div>
+                            </div>
+                        </motion.div>
                     ))}
                 </div>
-            </motion.div>
+            </div>
         </section>
     );
 };

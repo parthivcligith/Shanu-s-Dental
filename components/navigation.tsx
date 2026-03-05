@@ -4,6 +4,8 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
+import Image from "next/image"
+import { whatsappUrl } from "@/lib/whatsapp"
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -42,10 +44,15 @@ export function Navigation() {
             <div className="flex items-center justify-between h-16">
               <motion.a
                 href="#home"
-                className="text-xl font-medium tracking-tight text-foreground"
+                className="flex items-center gap-2"
                 whileHover={{ scale: 1.02 }}
               >
-                Shanu's Dental
+                <div className="relative h-10 w-10 shrink-0">
+                  <Image src="/images/favv-removebg-preview.png" alt="Shanu's Dental Icon" fill className="object-contain" />
+                </div>
+                <div className="relative h-12 w-36">
+                  <Image src="/images/logos.png" alt="Shanu's Dental Logo" fill className="object-contain object-left" />
+                </div>
               </motion.a>
 
               <div className="hidden md:flex items-center gap-6">
@@ -70,9 +77,11 @@ export function Navigation() {
                 transition={{ delay: 0.5, duration: 0.4 }}
                 className="hidden md:block"
               >
-                <Button className="bg-foreground text-background hover:bg-foreground/90 font-medium px-5 py-2 h-9 text-sm rounded-full">
-                  Book Online
-                </Button>
+                <a href={whatsappUrl("Hello! I'd like to book an appointment at Shanu's Dental Clinic.")} target="_blank" rel="noopener noreferrer">
+                  <Button className="bg-foreground text-background hover:bg-foreground/90 font-medium px-5 py-2 h-9 text-sm rounded-full">
+                    Book Online
+                  </Button>
+                </a>
               </motion.div>
 
               {/* Mobile Menu Button */}
@@ -99,9 +108,11 @@ export function Navigation() {
                       {link.name}
                     </a>
                   ))}
-                  <Button className="bg-foreground text-background hover:bg-foreground/90 font-medium rounded-full mt-2">
-                    Book Online
-                  </Button>
+                  <a href={whatsappUrl("Hello! I'd like to book an appointment at Shanu's Dental Clinic.")} target="_blank" rel="noopener noreferrer" className="block">
+                    <Button className="bg-foreground text-background hover:bg-foreground/90 font-medium rounded-full mt-2 w-full">
+                      Book Online
+                    </Button>
+                  </a>
                 </div>
               </motion.div>
             )}
