@@ -4,11 +4,6 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  icons: {
-    icon: "/images/favv-removebg-preview.png",
-    shortcut: "/images/favv-removebg-preview.png",
-    apple: "/images/favv-removebg-preview.png",
-  },
   title: {
     default: "Shanu's Dental — Comfortable Dentistry",
     template: "%s | Shanu's Dental"
