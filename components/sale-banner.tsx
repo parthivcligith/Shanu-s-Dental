@@ -66,6 +66,42 @@ export function SaleBanner() {
               Restore the strength and beauty of your smile with our premium dental crowns. We provide custom-fitted, durable, and natural-looking crowns designed to protect damaged teeth and enhance your overall oral health. Experience a comfortable, seamless process from preparation to final placement with guaranteed transparent pricing.
             </motion.p>
 
+            {/* Crown Types — subtle editorial strip */}
+            <motion.div
+              className="mb-8 max-w-md"
+              initial={{ opacity: 0, y: 10 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 1, delay: 0.28 }}
+            >
+              <div className="grid grid-cols-2 divide-x divide-border/30 border-t border-border/30 pt-5">
+                {/* Zirconia */}
+                <div className="pr-5 space-y-2">
+                  <p className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground/60 font-medium">Zirconia Crown</p>
+                  <p className="text-xs font-semibold text-foreground/80 leading-snug">For strength &amp; longevity</p>
+                  <div className="flex flex-col gap-1 pt-1">
+                    {["Metal-free", "15+ yr lifespan", "Ideal for molars", "Biocompatible"].map((f) => (
+                      <span key={f} className="text-[11px] text-muted-foreground/70 flex items-center gap-1.5">
+                        <span className="w-1 h-1 rounded-full bg-blue-400/70 shrink-0 inline-block" />{f}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* IPS Emax */}
+                <div className="pl-5 space-y-2">
+                  <p className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground/60 font-medium">IPS Emax Crown</p>
+                  <p className="text-xs font-semibold text-foreground/80 leading-snug">For aesthetics &amp; clarity</p>
+                  <div className="flex flex-col gap-1 pt-1">
+                    {["All-ceramic", "High translucency", "Ideal for front teeth", "Stain-resistant"].map((f) => (
+                      <span key={f} className="text-[11px] text-muted-foreground/70 flex items-center gap-1.5">
+                        <span className="w-1 h-1 rounded-full bg-primary/60 shrink-0 inline-block" />{f}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -98,7 +134,7 @@ export function SaleBanner() {
                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-black/15 rounded-full blur-xl" />
 
                 <Image
-                  src="/images/dental-implant.png"
+                  src="/images/equipment-removebg-preview.png"
                   alt="Dental Implant"
                   width={600}
                   height={900}

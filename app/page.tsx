@@ -68,7 +68,7 @@ export default function Home() {
         title="Get in Touch"
         description="We are here to help you with your dental needs. Book an appointment or ask us anything."
         phone="+971 56 537 6630 | +971 4 344 9838"
-        email="Drshanusclinic@gmail.com"
+        email="info@shanusdentalclinic.ae"
         address={{ label: "Office no: 903, Park avenue, Dubai silicon oasis", url: "https://share.google/6r7QQjUqPFvVmPsWx" }}
         web={{ label: "shanusdentalclinic.ae", url: "https://shanusdentalclinic.ae" }}
       />

@@ -20,7 +20,7 @@ export const Contact2 = ({
     title = "Contact Us",
     description = "We are available for questions, feedback, or collaboration opportunities. Let us know how we can help!",
     phone = "+971 56 537 6630 | +971 4 344 9838",
-    email = "Drshanusclinic@gmail.com",
+    email = "info@shanusdentalclinic.ae",
     address,
     web = { label: "shanusdentalclinic.ae", url: "https://shanusdentalclinic.ae" },
 }: Contact2Props) => {

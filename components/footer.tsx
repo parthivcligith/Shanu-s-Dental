@@ -105,7 +105,7 @@ export function Footer() {
                 </li>
                 <li className="flex items-center space-x-3 text-muted-foreground">
                   <Mail className="h-5 w-5 shrink-0" />
-                  <span>Drshanusclinic@gmail.com</span>
+                  <span>info@shanusdentalclinic.ae</span>
                 </li>
               </ul>
             </motion.div>

@@ -22,8 +22,7 @@ export function HeroSection() {
     restDelta: 0.001
   })
 
-  const toothY = useTransform(smoothProgress, [0, 1], [0, 500])
-  const toothScale = useTransform(smoothProgress, [0, 1], [1, 1.8])
+  const toothScale = useTransform(smoothProgress, [0, 0.8], [1, 2.2])
   const textY = useTransform(smoothProgress, [0, 1], [0, 50])
   const opacity = useTransform(smoothProgress, [0, 0.5], [1, 0])
 
@@ -73,9 +72,9 @@ export function HeroSection() {
 
       {/* Main Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-8 items-center min-h-[calc(100vh-5rem)]">
+        <div className="grid lg:grid-cols-2 gap-8 items-end min-h-[calc(100vh-5rem)]">
           {/* Left Side - Text */}
-          <motion.div className="flex flex-col justify-center pt-20 lg:pt-0 will-change-transform" style={{ y: textY }}>
+          <motion.div className="flex flex-col justify-center pt-20 lg:pt-0 will-change-transform self-center" style={{ y: textY }}>
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -140,7 +139,7 @@ export function HeroSection() {
           </motion.div>
 
           {/* Right Side - 3D Tooth with Depth & Overlay */}
-          <motion.div className="relative flex items-center justify-center z-20 will-change-transform" style={{ y: toothY, scale: toothScale }}>
+          <motion.div className="relative flex items-end justify-center z-20 will-change-transform pb-0" style={{ scale: toothScale, transformOrigin: "bottom center" }}>
             {/* Pedestal Shadow */}
             <motion.div
               className="absolute bottom-0 left-1/2 -translate-x-1/2 w-64 h-8 bg-foreground/5 rounded-full blur-xl"
