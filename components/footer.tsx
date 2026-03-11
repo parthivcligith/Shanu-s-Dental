@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Facebook, Instagram, Linkedin, Twitter, Send, MapPin, Phone, Mail } from "lucide-react"
+import { Facebook, Instagram, Send, MapPin, Phone, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import Image from "next/image"
@@ -32,21 +32,13 @@ export function Footer() {
                 Experience world-class dental care in a comfortable and modern environment. Your smile is our passion.
               </p>
               <div className="flex space-x-4">
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://www.facebook.com/share/1Bh1v5WutT/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                   <Facebook className="h-5 w-5" />
                   <span className="sr-only">Facebook</span>
                 </a>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://www.instagram.com/drshanusdental?igsh=aWl5NXFxM2M4N2N2&utm_source=qr" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                   <Instagram className="h-5 w-5" />
                   <span className="sr-only">Instagram</span>
-                </a>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                  <Twitter className="h-5 w-5" />
-                  <span className="sr-only">Twitter</span>
-                </a>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                  <Linkedin className="h-5 w-5" />
-                  <span className="sr-only">LinkedIn</span>
                 </a>
               </div>
             </motion.div>
