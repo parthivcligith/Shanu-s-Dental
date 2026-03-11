@@ -48,9 +48,12 @@ export const Contact2 = ({
                                 Contact Details
                             </h3>
                             <ul className="space-y-3">
-                                <li className="flex items-center gap-3 text-muted-foreground text-sm">
+                                <li className="flex items-start gap-3 text-muted-foreground text-sm">
                                     <span className="font-semibold text-foreground min-w-[50px]">Phone:</span>
-                                    <span>{phone}</span>
+                                    <div className="flex flex-col gap-1">
+                                        <a href="tel:+971565376630" className="hover:text-primary transition-colors">+971 56 537 6630</a>
+                                        <a href="tel:+97143449838" className="hover:text-primary transition-colors">+971 4 344 9838</a>
+                                    </div>
                                 </li>
                                 <li className="flex items-center gap-3 text-muted-foreground text-sm">
                                     <span className="font-semibold text-foreground min-w-[50px]">Email:</span>
