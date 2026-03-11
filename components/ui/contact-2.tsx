@@ -164,7 +164,7 @@ export const Contact2 = ({
                     <div className="flex flex-col gap-6 h-full min-h-[400px] xl:min-h-0">
                         <div className="h-full w-full rounded-2xl border bg-white/60 backdrop-blur-sm shadow-md overflow-hidden relative">
                             <iframe
-                                src="https://maps.google.com/maps?q=496M%2BQC+Dubai+-+United+Arab+Emirates&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                                src="https://maps.google.com/maps?q=Shanus+Dental+Clinic+Park+Avenue+Dubai+Silicon+Oasis&t=&z=17&ie=UTF8&iwloc=&output=embed"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0, minHeight: '100%' }}
