@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, useScroll, useTransform, useSpring } from "framer-motion"
-import { useRef } from "react"
+import { useRef, useEffect, useState } from "react"
 import Image from "next/image"
 import { whatsappUrl } from "@/lib/whatsapp"
 import { Button } from "@/components/ui/button"
@@ -22,7 +22,15 @@ export function HeroSection() {
     restDelta: 0.001
   })
 
-  const toothScale = useTransform(smoothProgress, [0, 0.8], [1, 2.2])
+  const [isMobile, setIsMobile] = useState(false)
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 640)
+    check()
+    window.addEventListener("resize", check)
+    return () => window.removeEventListener("resize", check)
+  }, [])
+
+  const toothScale = useTransform(smoothProgress, [0, 0.8], [1, isMobile ? 1.3 : 2.2])
   const textY = useTransform(smoothProgress, [0, 1], [0, 50])
   const opacity = useTransform(smoothProgress, [0, 0.5], [1, 0])
 
@@ -169,7 +177,7 @@ export function HeroSection() {
               <motion.img
                 src="/images/tooth-hero.png"
                 alt="3D Tooth Model"
-                className="relative w-96 sm:w-[30rem] lg:w-[42rem] h-auto drop-shadow-2xl will-change-transform"
+                className="relative w-[28rem] sm:w-[30rem] lg:w-[42rem] h-auto drop-shadow-2xl will-change-transform"
                 animate={{
                   y: [0, -10, 0],
                 }}
