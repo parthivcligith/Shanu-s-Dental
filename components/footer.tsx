@@ -95,7 +95,7 @@ export function Footer() {
               <ul className="space-y-4">
                 <li className="flex items-start space-x-3 text-muted-foreground">
                   <MapPin className="h-5 w-5 mt-0.5 shrink-0" />
-                  <a href="https://share.google/6r7QQjUqPFvVmPsWx" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors text-left">
+                  <a href="https://maps.app.goo.gl/fWRkYftXabYqxNLJ8" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors text-left">
                     <span>Office no: 903<br />Park avenue<br />Dubai silicon oasis</span>
                   </a>
                 </li>
