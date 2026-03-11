@@ -40,7 +40,7 @@ export function AboutSection() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                     >
                         <div className="bg-white/40 backdrop-blur-md p-8 rounded-3xl border border-white/30 shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
-                            <h3 className="text-4xl md:text-5xl font-bold text-primary mb-2">15+</h3>
+                            <h3 className="text-4xl md:text-5xl font-bold text-primary mb-2">10+</h3>
                             <p className="text-base font-medium text-muted-foreground">Years of Excellence</p>
                         </div>
                         <div className="bg-white/40 backdrop-blur-md p-8 rounded-3xl border border-white/30 shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
@@ -49,7 +49,7 @@ export function AboutSection() {
                         </div>
                         <div className="bg-white/40 backdrop-blur-md p-8 rounded-3xl border border-white/30 shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
                             <h3 className="text-4xl md:text-5xl font-bold text-primary mb-2">20+</h3>
-                            <p className="text-base font-medium text-muted-foreground">Expert Specialists</p>
+                            <p className="text-base font-medium text-muted-foreground">Expert Dentists</p>
                         </div>
                         <div className="bg-white/40 backdrop-blur-md p-8 rounded-3xl border border-white/30 shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
                             <h3 className="text-4xl md:text-5xl font-bold text-primary mb-2">4.9</h3>

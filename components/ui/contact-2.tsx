@@ -141,7 +141,7 @@ export const Contact2 = ({
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                         </svg>
                                     </div>
-                                    <span className="text-sm text-muted-foreground">Experienced and caring specialists</span>
+                                    <span className="text-sm text-muted-foreground">Experienced and caring dentists</span>
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <div className="h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center shrink-0">

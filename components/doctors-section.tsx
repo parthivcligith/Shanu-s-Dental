@@ -20,7 +20,7 @@ const doctors = [
   },
   {
     name: "Dr. Omar Al Shamsi",
-    title: "Implant Specialist",
+    title: "Implant Dentist",
     image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=800&auto=format&fit=crop",
     specialty: "Dental Implants",
   },
@@ -55,7 +55,7 @@ export function DoctorsSection() {
             Expert Care
           </span>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight">
-            Meet Our Specialists
+            Meet Our Doctors
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Our team of highly qualified professionals is dedicated to providing you with the best dental care in the UAE.
